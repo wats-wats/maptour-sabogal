@@ -48,22 +48,21 @@
     }
 
     .swiper-pagination-bullet {
-      width: 14px;
-      height: 14px
+      width: 20px;
+      height: 20px;
       text-align: center;
-      line-height: 14px;
+      line-height: 20px;
       font-size: 12px;
-      background: #fff
+      background: #fff;
       opacity: 0.7;
       margin: 0px 6px !important;
       transition: width 0.2s, height 0.2s, opacity 0.2s;
     }
-
-    .swiper-pagination-bullet:hover {
-      opacity: 0.9;
-    }
+    
     .swiper-pagination-bullet-active {
       opacity: 1;
+      color: #FFFF00;
+      background: #007aff;
     }
     }
   </style>
@@ -72,10 +71,9 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('img/slider1-dragon76-image1.jpg')"></div>
-      <div class="swiper-slide" style="background-image: url('img/slider1-dragon76-image2.jpg')"></div>
-      <div class="swiper-slide" style="background-image: url('img/slider1-dragon76-image3.jpg')"></div>
-      <div class="swiper-slide" style="background-image: url('img/slider1-dragon76-image4.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('img/slider-sabogal-image1.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('img/slider-sabogal-image2.jpg')"></div>
+      <div class="swiper-slide" style="background-image: url('img/slider-sabogal-image3.jpg.jpg')"></div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -95,7 +93,7 @@
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + '</span>';
+          return '<span class="' + className + '">' + (index +1) + '</span>';
         },
       },
     });
